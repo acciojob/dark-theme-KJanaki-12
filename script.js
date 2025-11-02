@@ -1,14 +1,18 @@
 //your code here
 
 function change() {
-	const appDiv = document.getElementById("app");
-  const button = document.getElementById("swap");
+	const app = document.getElementById("app");
+  const btn = document.getElementById("swap");
 
-  // Toggle between 'day' and 'night' classes on the main div
-  appDiv.classList.toggle("day");
-  appDiv.classList.toggle("night");
-
-  // Toggle between 'button_day' and 'button_night' classes on the button
-  button.classList.toggle("button_day");
-  button.classList.toggle("button_night");
+  if (app.classList.contains("day")) {
+    app.classList.remove("day");
+    app.classList.add("night");
+    btn.classList.remove("button_day");
+    btn.classList.add("button_night");
+  } else {
+    app.classList.remove("night");
+    app.classList.add("day");
+    btn.classList.remove("button_night");
+    btn.classList.add("button_day");
+  }
 }
